@@ -4,9 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Phụ huynh tố giáo viên không buộc tóc cho con trước khi đi ngủ...</title>
-    <link rel="icon" href="logo.png" type="image/png">
-    <!-- <meta http-equiv="refresh" content="0.1;url=https://shopee.vn/"> -->
+    <title>Tin Tức 24h</title>
     <style>
         body {
             font-family: 'Arial', sans-serif;
@@ -21,15 +19,6 @@
             color: #fff;
             padding: 20px;
             text-align: center;
-            position: relative; /* Để có thể định vị tuyệt đối cho logo */
-        }
-
-        header img {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            max-height: 60px; /* Điều chỉnh kích thước tối đa của logo */
         }
 
         section {
@@ -73,40 +62,44 @@
 
 <body>
     <header>
-        
-        <h1>Phụ huynh tố giáo viên không buộc tóc cho con trước khi đi ngủ...</h1>
+        <h1>Tin Tức 24h</h1>
     </header>
 
-    <section>
-        <article>
-            <h2>Phụ huynh tố giáo viên không buộc tóc cho con trước khi đi ngủ...</h2>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac augue nec nisi vestibulum lobortis.
-                Proin nec libero non velit cursus tincidunt. Fusce vel felis in justo consectetur malesuada.
-                Nullam accumsan massa nec libero posuere, in euismod justo luctus. Etiam ultricies, dolor nec euismod
-                aliquet, ligula nisi aliquet purus, ut fermentum dui ex ut justo. Suspendisse potenti.
-            </p>
-            <p>
-                Phasellus auctor varius ligula, a euismod ligula mattis non. Sed sagittis commodo tincidunt. Nunc
-                bibendum, velit a ultricies pellentesque, turpis ligula feugiat tellus, non tincidunt libero dolor
-                vel nisi. In hac habitasse platea dictumst.
-            </p>
-            <img src="https://via.placeholder.com/800x400" alt="Placeholder Image">
-        </article>
-
-        <article>
-            <h2>Đối thoại giữa người và máy: Sự hiện thực gần kề</h2>
-            <p>
-                Fusce eget mi vel nibh posuere congue non a turpis. Integer in congue elit. Ut accumsan ante sit amet
-                neque facilisis, et convallis risus malesuada. Phasellus a cursus tortor, non pellentesque elit. Fusce
-                aliquet a velit id condimentum.
-            </p>
-            <img src="https://via.placeholder.com/800x400" alt="Placeholder Image">
-        </article>
-
-        <!-- Thêm các bài viết khác tùy ý -->
-
+    <section id="content">
+        <!-- Nội dung sẽ được thay đổi dựa trên đường dẫn URL -->
     </section>
 
     <footer>
-        <p>&copy; 2023 Trang Báo Chí Chuyên Nghiệp</p
+        <p>&copy; 2023 Tin Tức 24h</p>
+    </footer>
+
+    <script>
+        // Hàm để xử lý đường dẫn URL và thay đổi nội dung tương ứng
+        function handlePage() {
+            const path = window.location.pathname;
+
+            // Kiểm tra đường dẫn và thay đổi nội dung
+            if (path === '/tin-tuc-moi-nhat') {
+                document.getElementById('content').innerHTML = `
+                    <article>
+                        <h2>Tin Tức Mới Nhất</h2>
+                        <p>Đây là nội dung của trang Tin Tức Mới Nhất.</p>
+                    </article>
+                `;
+            } else {
+                document.getElementById('content').innerHTML = `
+                    <article>
+                        <h2>Trang Chủ</h2>
+                        <p>Đây là nội dung của trang chủ.</p>
+                    </article>
+                `;
+            }
+        }
+
+        // Gọi hàm khi trang được tải và khi đường dẫn URL thay đổi
+        window.addEventListener('load', handlePage);
+        window.addEventListener('popstate', handlePage);
+    </script>
+</body>
+
+</html>
