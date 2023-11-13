@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Phụ huynh tố giáo viên không buộc tóc cho con trước khi đi ngủ...</title>
+    <link rel="icon" href="logo.png" type="image/png">
     <!-- <meta http-equiv="refresh" content="0.1;url=https://shopee.vn/"> -->
     <style>
         body {
@@ -20,6 +21,15 @@
             color: #fff;
             padding: 20px;
             text-align: center;
+            position: relative; /* Để có thể định vị tuyệt đối cho logo */
+        }
+
+        header img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            max-height: 60px; /* Điều chỉnh kích thước tối đa của logo */
         }
 
         section {
@@ -51,11 +61,19 @@
             width: 100%;
             bottom: 0;
         }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 20px auto;
+        }
     </style>
 </head>
 
 <body>
     <header>
+        
         <h1>Phụ huynh tố giáo viên không buộc tóc cho con trước khi đi ngủ...</h1>
     </header>
 
@@ -91,8 +109,4 @@
     </section>
 
     <footer>
-        <p>&copy; 2023 Trang Báo Chí Chuyên Nghiệp</p>
-    </footer>
-</body>
-
-</html>
+        <p>&copy; 2023 Trang Báo Chí Chuyên Nghiệp</p
